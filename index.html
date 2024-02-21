@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/costom.css" />
+
+    <title>countdown</title>
+  </head>
+  <body class="">
+    <!-- video background -->
+    <video
+      class="fixed w-full lg:h-auto right-0 bottom-0 h-full object-cover object-center"
+      muted
+      loop
+      autoplay
+    >
+      <source src="./1108250747-preview (1).mp4" />
+    </video>
+    <!-- overlay for video background -->
+    <div class="fixed top-0 left-0 bg-black w-full h-full bg-opacity-50"></div>
+
+    <!-- container for content -->
+    <div class="flex items-center justify-center h-screen">
+      <div
+        class="bg-white z-20 mx-4 bg-opacity-80 w-[420px] md:w-[500px] h-[300px] rounded-md p-6"
+      >
+        <!-- 1  firt section counTdown input form -->
+        <div id="inputFormContainer" class="flex flex-col space-y-2">
+          <h1
+            class="capitalize text-2xl font-semibold text-center text-rose-700"
+          >
+            let's countdown for !
+          </h1>
+          <form class="flex flex-col" id="countdownForm">
+            <label for="title" class="capitalize text-zinc-700">Title</label>
+            <input
+              type="text"
+              id="titleInput"
+              placeholder="what are you counting down to ?"
+              class="rounded-lg placeholder:font-thin placeholder:text-xs placeholder:capitalize p-2 outline-none mb-4"
+            />
+            <label for="datePicker" class="capitalize text-zinc-700"
+              >select a date</label
+            >
+            <input
+              type="date"
+              id="datePicker"
+              class="rounded-lg placeholder:font-thin placeholder:text-sm p-2 outline-none mb-4"
+            />
+            <button
+              type="submit"
+              class="rounded-md p-2 text-center bg-zinc-700 text-white mt-2 uppercase border-2 border-zinc-700 hover:bg-zinc-50 hover:text-zinc-700 tracking-wider hover:animate-pulse ease-in-out"
+            >
+              submit
+            </button>
+          </form>
+        </div>
+
+        <!-- 2-coundown form -->
+        <div id="coundownDiv" class="hidden flex flex-col space-y-6 py-4">
+          <h1 id="title" class="text-3xl font-bold text-center capitalize">
+            coundown title here
+          </h1>
+          <!-- coundowning -->
+          <ul class="flex space-x-6 md:space-x-8 justify-center">
+            <li class="flex flex-col space-y-2 text-center uppercase">
+              <span class="text-4xl font-semibold text-rose-700">0</span>days
+            </li>
+            <li class="flex flex-col space-y-2 text-center uppercase">
+              <span class="text-4xl font-semibold text-rose-700">0</span>hours
+            </li>
+            <li class="flex flex-col space-y-2 text-center uppercase">
+              <span class="text-4xl font-semibold text-rose-700">0</span>minutes
+            </li>
+            <li class="flex flex-col space-y-2 text-center uppercase">
+              <span class="text-4xl font-semibold text-rose-700 animate-bounce"
+                >0</span
+              >seconds
+            </li>
+          </ul>
+
+          <!-- reset button -->
+          <button
+            id="resetButton"
+            type="submit"
+            class="rounded-md p-2 text-center border-2 border-rose-700 font-semibold hover:bg-rose-50 hover:text-rose-700 bg-rose-700 text-white mt-2 uppercase animate-pulse tracking-wider"
+          >
+            reset
+          </button>
+        </div>
+        <!-- 3-complete coundown -->
+        <div id="completeDiv" class="hidden py-6 flex flex-col space-y-4">
+          <h3
+            class="completed text-3xl font-semibold text-center text-rose-700 capitalize"
+          >
+            countdown complete !
+          </h3>
+          <h3 class="text-xl md:text-2xl font-semibold text-center capitalize">
+            countdown complete on
+            <span class="text-rose-700" id="completeDate">2024-2-4</span>
+          </h3>
+          <button
+            id="newCountdown"
+            type="submit"
+            class="rounded-md p-2 text-center bg-zinc-700 text-white mt-2 uppercase border-2 border-zinc-700 hover:bg-zinc-50 hover:text-zinc-700 tracking-wider hover:animate-pulse"
+          >
+            new countdown
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- script file -->
+    <!-- <script src="./script.js"></script> -->
+    <script src="./costom.js"></script>
+  </body>
+</html>

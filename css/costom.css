@@ -1,0 +1,15 @@
+.completed {
+  animation: costom 4s infinite;
+}
+@keyframes costom {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: red;
+    transform: scale(1.2);
+  }
+  50% {
+    color: gray;
+  }
+}
